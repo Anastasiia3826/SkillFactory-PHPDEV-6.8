@@ -1,27 +1,36 @@
-const trafficLight1El = document.querySelector('#trafficLight1');
-const trafficLight2El = document.querySelector('#trafficLight2');
-const trafficLight3El = document.querySelector('#trafficLight3');
+const trafficLightEl = document.querySelector('#trafficLight1');
+const trafficLightE2 = document.querySelector('#trafficLight2');
+const trafficLightE3 = document.querySelector('#trafficLight3');
 
 function makeGreen() {
-    trafficLight1El.style.background = ('green');
-    trafficLight1El.removeEventListener('click', makeGreen);
-    trafficLight1El.addEventListener('click', makeYellow);
+    trafficLightEl.style.background = ('green');
+    trafficLightEl.removeEventListener('click', makeGreen);
+    trafficLightEl.addEventListener('click', makeYellow);
 }
 
-trafficLight1El.addEventListener('click', makeGreen);
+trafficLightEl.addEventListener('click', makeGreen);
 
 function makeYellow() {
-    trafficLight2El.style.background = ('yellow');
-    trafficLight2El.removeEventListener('click', makeYellow);
-    trafficLight2El.addEventListener('click', makeRed);
+    trafficLightEl.style.background = ('yellow');
+    trafficLightEl.removeEventListener('click', makeYellow);
+    trafficLightEl.addEventListener('click', makeRed);
 }
 
-trafficLight2El.addEventListener('click', makeYellow);
+trafficLightEl.addEventListener('click', makeYellow);
 
 function makeRed() {
-    trafficLight3El.style.background = ('red');
-    trafficLight3El.removeEventListener('click', makeRed);
-    trafficLight3El.addEventListener('click', makeGreen);
+    trafficLightEl.style.background = ('red');
+    trafficLightEl.removeEventListener('click', makeRed);
+    trafficLightEl.addEventListener('click', makeGreen);
 }
 
-trafficLight3El.addEventListener('click', makeRed);
+trafficLightEl.addEventListener('click', makeRed);
+
+function makeBlack() {
+
+        trafficLightEl.style.background = ('black');
+        trafficLightEl.removeEventListener('click', makeBlack);
+        trafficLightEl.addEventListener('click', makeGreen);
+    }
+    
+    trafficLightEl.addEventListener('click', makeBlack);
