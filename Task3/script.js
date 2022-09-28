@@ -1,6 +1,4 @@
 const trafficLightEl = document.querySelector('#trafficLight1');
-const trafficLightE2 = document.querySelector('#trafficLight2');
-const trafficLightE3 = document.querySelector('#trafficLight3');
 
 function makeGreen() {
     trafficLightEl.style.background = ('green');
@@ -25,12 +23,3 @@ function makeRed() {
 }
 
 trafficLightEl.addEventListener('click', makeRed);
-
-function makeBlack() {
-
-        trafficLightEl.style.background = ('black');
-        trafficLightEl.removeEventListener('click', makeBlack);
-        trafficLightEl.addEventListener('click', makeGreen);
-    }
-    
-    trafficLightEl.addEventListener('click', makeBlack);
